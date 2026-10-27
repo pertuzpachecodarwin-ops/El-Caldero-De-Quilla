@@ -11,7 +11,7 @@ body {
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.45)
         ),
-        url('Imagen/fondo-pizarra.png');
+        url('fondo-pizarra.png');
 
     background-size: cover;
     background-position: center;
