@@ -1,0 +1,896 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    color: #333;
+
+    scroll-behavior: smooth;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url('Imagen/fondo-pizarra.png');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    animation: fondoMovimiento 12s ease-in-out infinite alternate;
+}
+/* ========================= */
+/* ENCABEZADO */
+/* ========================= */
+
+#header {
+    height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('Imagen/fondo-pizarra.png');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 30px 60px;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================= */
+/* LOGO */
+/* ========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    color: white;
+}
+
+.logo-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 30%;
+    animation: flotar 10s ease-in-out infinite;
+}
+
+.logo h1 {
+    font-size: 60px;
+    margin: 0;
+    animation: entrarTitulo 7s ease;
+}
+
+.logo p {
+    font-size: 20px;
+    animation: entrarTexto 7s ease;
+}
+
+/* ================================= */
+/* HAMBURGUESA ANIMADA */
+/* ================================= */
+
+.hamburguesa-container {
+    position: absolute;
+
+    top: 60%;
+    left: 50%;
+
+    transform: translate(-50%, -45%);
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+
+/* Contenedor de la hamburguesa */
+
+.hamburguesa {
+    position: relative;
+
+    width: 320px;
+    height: 260px;
+
+    margin: auto;
+
+    animation: hamburguesaFlotando 4s ease-in-out infinite;
+
+    cursor: pointer;
+}
+
+
+/* ================================= */
+/* PAN SUPERIOR */
+/* ================================= */
+
+.pan-superior {
+    position: absolute;
+
+    width: 260px;
+    height: 90px;
+
+    background: linear-gradient(
+        to bottom,
+        #e9a13a,
+        #c96c20
+    );
+
+    border-radius: 150px 150px 35px 35px;
+
+    left: 30px;
+    top: 0;
+
+    box-shadow:
+        inset 0 -10px 10px rgba(0,0,0,0.2),
+        0 8px 15px rgba(0,0,0,0.4);
+
+    transition: all 0.7s ease;
+
+    z-index: 7;
+}
+
+
+/* ================================= */
+/* SEMILLAS */
+/* ================================= */
+
+.semilla {
+    position: absolute;
+
+    width: 8px;
+    height: 4px;
+
+    background: #fff3c4;
+
+    border-radius: 50%;
+
+    transform: rotate(-20deg);
+}
+
+.semilla1 {
+    left: 70px;
+    top: 30px;
+}
+
+.semilla2 {
+    left: 120px;
+    top: 20px;
+}
+
+.semilla3 {
+    left: 165px;
+    top: 32px;
+}
+
+.semilla4 {
+    left: 205px;
+    top: 25px;
+}
+
+
+/* ================================= */
+/* LECHUGA */
+/* ================================= */
+
+.lechuga {
+    position: absolute;
+
+    width: 280px;
+    height: 25px;
+
+    left: 20px;
+    top: 78px;
+
+    background: #4caf50;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 4px 8px rgba(0,0,0,0.4);
+
+    transition: all 0.7s ease;
+
+    z-index: 6;
+}
+
+
+/* ================================= */
+/* QUESO */
+/* ================================= */
+
+.queso {
+    position: absolute;
+
+    width: 270px;
+    height: 25px;
+
+    left: 25px;
+    top: 98px;
+
+    background: #ffc107;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        95% 100%,
+        80% 60%,
+        65% 100%,
+        50% 60%,
+        35% 100%,
+        20% 60%,
+        5% 100%
+    );
+
+    transition: all 0.7s ease;
+
+    z-index: 5;
+}
+
+
+/* ================================= */
+/* CARNE */
+/* ================================= */
+
+.carne {
+    position: absolute;
+
+    width: 270px;
+    height: 55px;
+
+    left: 25px;
+    top: 118px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #5d2818,
+            #32140c
+        );
+
+    border-radius: 15px;
+
+    box-shadow:
+        inset 0 -7px 5px rgba(0,0,0,0.4),
+        0 5px 10px rgba(0,0,0,0.5);
+
+    transition: all 0.7s ease;
+
+    z-index: 4;
+}
+
+
+/* ================================= */
+/* TOMATE */
+/* ================================= */
+
+.tomate {
+    position: absolute;
+
+    width: 250px;
+    height: 18px;
+
+    left: 35px;
+    top: 168px;
+
+    background: #e53935;
+
+    border-radius: 50%;
+
+    transition: all 0.7s ease;
+
+    z-index: 3;
+}
+
+
+/* ================================= */
+/* SEGUNDO QUESO */
+/* ================================= */
+
+.queso2 {
+    top: 180px;
+
+    background: #ffca28;
+
+    height: 20px;
+
+    z-index: 2;
+}
+
+
+/* ================================= */
+/* PAN INFERIOR */
+/* ================================= */
+
+.pan-inferior {
+    position: absolute;
+
+    width: 270px;
+    height: 45px;
+
+    left: 25px;
+    top: 200px;
+
+    background: linear-gradient(
+        to bottom,
+        #d98228,
+        #a94e16
+    );
+
+    border-radius: 20px 20px 40px 40px;
+
+    box-shadow:
+        inset 0 -8px 10px rgba(0,0,0,0.3),
+        0 8px 15px rgba(0,0,0,0.4);
+
+    transition: all 0.7s ease;
+
+    z-index: 1;
+}
+
+
+/* ================================= */
+/* TEXTO */
+/* ================================= */
+
+.texto-hamburguesa {
+    margin-top: 25px;
+
+    color: white;
+
+    text-shadow:
+        2px 2px 5px black;
+
+    opacity: 0.95;
+}
+
+.texto-hamburguesa h2 {
+    font-size: 28px;
+
+    margin: 0;
+
+    color: #ffb703;
+}
+
+.texto-hamburguesa p {
+    font-size: 17px;
+
+    margin-top: 8px;
+}
+
+
+/* ================================= */
+/* EFECTO FLOTAR */
+/* ================================= */
+
+@keyframes hamburguesaFlotando {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================= */
+/* EFECTO DESARMAR */
+/* ================================= */
+
+.hamburguesa:hover .pan-superior {
+    transform: translateY(-70px) rotate(-5deg);
+}
+
+.hamburguesa:hover .lechuga {
+    transform: translateY(-35px) rotate(3deg);
+}
+
+.hamburguesa:hover .queso {
+    transform: translateY(-10px) rotate(-4deg);
+}
+
+.hamburguesa:hover .carne {
+    transform: translateY(25px) rotate(2deg);
+}
+
+.hamburguesa:hover .tomate {
+    transform: translateY(55px) rotate(-3deg);
+}
+
+.hamburguesa:hover .queso2 {
+    transform: translateY(75px) rotate(4deg);
+}
+
+.hamburguesa:hover .pan-inferior {
+    transform: translateY(100px) rotate(-2deg);
+}
+
+
+/* ================================= */
+/* TEXTO CUANDO PASA EL MOUSE */
+/* ================================= */
+
+.hamburguesa:hover + .texto-hamburguesa h2 {
+    color: #ffca28;
+
+    transform: scale(1.08);
+}
+
+.texto-hamburguesa h2 {
+    transition: all 0.4s ease;
+}
+
+/* ========================= */
+/* MENÚ DE NAVEGACIÓN */
+/* ========================= */
+
+#nav {
+    display: flex;
+    gap: 20px;
+
+    background-color: #2b2a2a;
+    padding: 15px;
+
+    text-align: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+#nav a:hover {
+    color: #ffb703;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+
+/* ========================= */
+/* TÍTULO */
+/* ========================= */
+
+#header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+#header h1:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================= */
+/* CONTENIDO */
+/* ========================= */
+
+#main {
+    padding: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* ========================= */
+/* TARJETAS */
+/* ========================= */
+
+.section {
+    background: white;
+
+    margin-bottom: 25px;
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.4s ease;
+
+    animation: aparecer 2s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================= */
+/* CATEGORÍAS DEL MENÚ */
+/* ========================= */
+
+.categoria-menu {
+    background: white;
+    margin-bottom: 30px;
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.4s ease;
+}
+
+.categoria-menu:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* TÍTULO DE CADA CATEGORÍA */
+
+.categoria-menu > h2 {
+    text-align: center;
+
+    font-size: 32px;
+
+    color: #da3e4b;
+
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    border-bottom: 3px solid #ffb703;
+
+    padding-bottom: 12px;
+}
+
+
+/* ========================= */
+/* CONTENEDOR DE PRODUCTOS */
+/* ========================= */
+
+.productos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.producto {
+    cursor: pointer;
+}
+
+.producto:active {
+    transform: scale(0.98);
+}
+
+
+/* ========================= */
+/* TARJETA DEL PRODUCTO */
+/* ========================= */
+
+.producto {
+    background: #f8f9fa;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+
+    transition: all 0.4s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.producto:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.15);
+
+    border-color: #ffb703;
+}
+
+
+/* NOMBRE DEL PRODUCTO */
+
+.producto h3 {
+    color: #da3e4b;
+
+    font-size: 22px;
+
+    margin-top: 0;
+}
+
+
+/* DESCRIPCIÓN */
+
+.producto p {
+    color: #555;
+
+    line-height: 1.6;
+
+    min-height: 50px;
+}
+
+
+/* PRECIO */
+
+.producto strong {
+    display: block;
+
+    font-size: 22px;
+
+    color: #1d3557;
+
+    margin-top: 15px;
+}
+
+
+/* ========================= */
+/* BOTÓN ORDENAR */
+/* ========================= */
+
+.producto button {
+    margin-top: 15px;
+}
+
+/* ========================= */
+/* ADICIONALES */
+/* ========================= */
+
+.adicionales {
+    margin-top: 25px;
+    padding: 10px;
+
+    background-color: #f1f1f1;
+
+    border-radius: 10px;
+}
+
+.adicionales h3 {
+    color: #da3e4b;
+}
+
+
+/* ========================= */
+/* BOTONES */
+/* ========================= */
+
+button {
+    background: linear-gradient(
+        135deg,
+        #e63946,
+        #ff4d6d
+    );
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    cursor: pointer;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+button:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 5px 15px rgba(230, 57, 70, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* Efecto brillo */
+
+button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    transition: 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+
+/* ========================= */
+/* CONTACTO */
+/* ========================= */
+
+#contacto p {
+    font-size: 18px;
+
+    transition: all 0.3s ease;
+}
+
+#contacto p:hover {
+    color: #e63946;
+
+    padding-left: 10px;
+}
+
+
+/* ========================= */
+/* PIE DE PÁGINA */
+/* ========================= */
+
+#footer {
+    background: linear-gradient(
+        135deg,
+        #1d3557,
+        #457b9d
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+
+/* ========================= */
+/* ANIMACIÓN DE ENTRADA */
+/* ========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================= */
+/* ANIMACIÓN DEL LOGO */
+/* ========================= */
+
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* ========================= */
+/* ANIMACIÓN DEL TÍTULO */
+/* ========================= */
+
+@keyframes entrarTitulo {
+
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ========================= */
+/* ANIMACIÓN DEL SUBTÍTULO */
+/* ========================= */
+
+@keyframes entrarTexto {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ========================= */
+/* ANIMACIÓN DEL FONDO */
+/* ========================= */
+
+#header {
+    animation: zoomFondo 8s infinite alternate;
+}
+
+@keyframes zoomFondo {
+
+    from {
+        background-size: 90%;
+    }
+
+    to {
+        background-size: 100%;
+    }
+}
+
+@keyframes fondoMovimiento {
+
+    from {
+        background-size: 100%;
+        background-position: center center;
+    }
+
+    to {
+        background-size: 110%;
+        background-position: center center;
+    }
+}
